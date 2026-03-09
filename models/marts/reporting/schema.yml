@@ -1,0 +1,49 @@
+version: 2
+
+models:
+  - name: rpt_monthly_violations
+    description: Monthly total number of repeat traffic violations for dashboard trend analysis
+    columns:
+      - name: violation_year_month
+        description: Year and month of violation in YYYY-MM format
+        tests:
+          - not_null
+      - name: violation_date
+        description: Parsed date used for table partitioning
+        tests:
+          - not_null
+      - name: total_violations
+        description: Total number of violations recorded in that month
+        tests:
+          - not_null
+
+  - name: rpt_gender_distribution
+    description: Distribution of repeat traffic violations by gender
+    columns:
+      - name: gender
+        description: Gender of offender
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Male', 'Female']
+      - name: total_violations
+        description: Total number of violations committed by that gender
+
+  - name: rpt_age_distribution
+    description: Distribution of repeat traffic violations by offender age
+    columns:
+      - name: age
+        description: Age of offender
+      - name: total_violations
+        description: Total violations for each age group
+
+  - name: rpt_violation_type
+    description: Distribution of repeat traffic violations by violation type in English
+    columns:
+      - name: repeat_violation_type
+        description: Violation type translated to English
+        tests:
+          - not_null
+      - name: total_violations
+        description: Total number of violations for each violation type
