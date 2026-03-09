@@ -1,0 +1,29 @@
+version: 2
+
+sources:
+  - name: processed
+    description: Spark-processed traffic offenders data 
+    database: traffic-offenders
+    schema: traffic
+    tables:
+      - name: traffic_processed_2025
+        description: Spark-processed 2025 traffic data
+        columns:
+          - name: violation_year_month
+            description: "Violation year and month (YYYY-MM)"
+          - name: age
+            description: Age of traffic offenders
+          - name: gender
+            description: Gender of traffic offenders
+          - name: violation_type
+            description: Violation type
+          - name: roc_year
+            description: Violation ROC year
+          - name: month
+            description: Violation month
+          - name: city
+            description: City
+          - name: city_code
+            description: City code
+          - name: year
+            description: Violation year
