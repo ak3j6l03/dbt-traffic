@@ -1,0 +1,26 @@
+models:
+  - name: int_traffic_offenders
+    description: >
+      Intermediate model that standardizes traffic offender data 
+      and translates violation types to English using violation_type_lookup.csv
+    columns:
+      - name: violation_year_month
+        description: "Violation year and month (YYYY-MM)"
+        data_tests:
+          - not_null
+      - name: age
+        description: Age of traffic offenders
+      - name: gender
+        description: Gender of traffic offenders
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['Male', 'Female']
+      - name: repeat_violation_type
+        description: Violation type in English
+      - name: roc_year
+        description: Violation ROC year
+      - name: month
+        description: Violation month
+      - name: year
+        description: Violation year
