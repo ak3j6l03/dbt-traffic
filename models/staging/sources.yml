@@ -6,7 +6,7 @@ sources:
     database: traffic-offenders
     schema: traffic
     tables:
-      - name: traffic_processed_2025
+      - name: traffic_processed
         description: Spark-processed 2025 traffic data
         columns:
           - name: violation_year_month

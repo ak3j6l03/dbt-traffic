@@ -1,6 +1,8 @@
+{% set year = var('year', 2025) %}
+
 with source as (
     select *
-    from {{ source('processed', 'traffic_processed_2025') }}
+    from {{ source('processed', 'traffic_processed_' ~ year) }}
 ),
 
 cleaned as (
