@@ -6,7 +6,7 @@ with source as (
 cleaned as (
     select
         cast(violation_year_month as string) as violation_year_month,
-        cast(age as int) as age,
+        SAFE_CAST(age AS INT64) AS age,  
         cast(gender as string) as gender,
         cast(violation_type as string) as violation_type,
         cast(roc_year as int) as roc_year,
@@ -17,3 +17,4 @@ cleaned as (
 
 select *
 from cleaned
+WHERE (age IS NULL OR age >= 0) 

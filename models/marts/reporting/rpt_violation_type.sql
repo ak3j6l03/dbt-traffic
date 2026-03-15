@@ -8,4 +8,3 @@ SELECT
     COUNT(*) AS total_violations
 FROM {{ ref('int_traffic_offenders') }}
 GROUP BY repeat_violation_type
-ORDER BY total_violations DESC
