@@ -6,8 +6,8 @@ sources:
     database: "{{ env_var('DBT_DATABASE') }}"
     schema: "{{ env_var('DBT_SCHEMA') }}"
     tables:
-      - name: traffic_processed_2025
-        description: Spark-processed 2025 traffic data
+      - name: traffic_processed
+        description: Spark-processed traffic data
         columns:
           - name: violation_year_month
             description: "Violation year and month (YYYY-MM)"

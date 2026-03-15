@@ -1,7 +1,7 @@
 models:
   - name: stg_traffic_offenders
     description: >
-      Staging model for 2025 traffic data. This model standardizes 
+      Staging model for traffic data. This model standardizes 
       data types from the spark-processed data source and drops city columns.
     columns:
       - name: violation_year_month
