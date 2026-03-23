@@ -1,6 +1,6 @@
 {{ config(
     materialized='incremental',
-    schema="{{ env_var('DBT_DATASET') }}"
+    schema='traffic'
 ) }}
 
 SELECT *
