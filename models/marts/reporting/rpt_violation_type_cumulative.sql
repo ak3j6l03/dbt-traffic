@@ -1,4 +1,3 @@
--- unique_key=['repeat_violation_type','year']
 {{ config(
     materialized='incremental',
     schema="{{ env_var('DBT_DATASET') }}"

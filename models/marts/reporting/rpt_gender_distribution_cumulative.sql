@@ -1,4 +1,3 @@
--- unique_key=['gender','year']
 {{ config(
     materialized='incremental',
     schema="{{ env_var('DBT_DATASET') }}"
