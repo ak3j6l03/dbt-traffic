@@ -1,7 +1,7 @@
+-- unique_key=['age','year']
 {{ config(
     materialized='incremental',
     schema="{{ env_var('DBT_DATASET') }}"
-    # unique_key=['age','year']
 ) }}
 
 SELECT *
