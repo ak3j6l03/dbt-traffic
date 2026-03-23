@@ -1,7 +1,7 @@
 {{ config(
     materialized='incremental',
     schema="{{ env_var('DBT_DATASET') }}"
-    --unique_key=['violation_year_month','year']
+    # unique_key=['violation_year_month','year']
 ) }}
 
 SELECT *
