@@ -4,7 +4,7 @@ sources:
   - name: processed
     description: Spark-processed traffic offenders data 
     database: "{{ env_var('DBT_DATABASE') }}"
-    schema: "{{ env_var('DBT_SCHEMA') }}"
+    schema: "{{ env_var('DBT_DATASET') }}_{{ env_var('DBT_YEAR') }}"
     tables:
       - name: traffic_processed
         description: Spark-processed traffic data
