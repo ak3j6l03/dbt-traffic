@@ -8,4 +8,4 @@ SELECT
     year,
     COUNT(*) AS total_violations
 FROM {{ ref('int_traffic_offenders') }}
-GROUP BY gender
+GROUP BY gender, year

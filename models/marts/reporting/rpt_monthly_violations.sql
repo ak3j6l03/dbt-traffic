@@ -13,4 +13,4 @@ SELECT
     PARSE_DATE('%Y-%m', violation_year_month) AS violation_date,
     COUNT(*) AS total_violations
 FROM {{ ref('int_traffic_offenders') }}
-GROUP BY violation_year_month, violation_date
+GROUP BY violation_year_month, violation_date, year, month
