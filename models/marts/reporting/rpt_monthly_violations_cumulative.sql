@@ -1,5 +1,6 @@
 {{ config(
     materialized='incremental',
+    database='traffic_offenders',
     schema='traffic'
 ) }}
 
